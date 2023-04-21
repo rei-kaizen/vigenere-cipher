@@ -60,8 +60,13 @@ class Interface:
         self.message_box = Text(whole_frame, relief=GROOVE, borderwidth=0, font = ("verdana", 13), fg="white", bg="black")
         self.message_box.place(x=15, y=50, width=355, height=100)        
         self.key_box = Text(whole_frame, borderwidth=0, font = ("verdana", 15), fg="white", bg="black")
-        self.key_box.place(x=15, y=200,  width=355, height=50 )
+        self.key_box.place(x=15, y=200,  width=355, height=50)
 
+        #add the labels for user input guidance
+        message_label = Label(self.root, text="Enter a message to encrypt", font = ("Helvetica 12 bold"), fg="gray", bg="#1c1c1c")
+        message_label.place(x=15, y=20)
+        key_label = Label(self.root, text="Enter a key for encryption", font = ("Helvetica 12 bold"), fg="gray", bg="#1c1c1c")
+        key_label.place(x=15, y=170)
 
         self.root.mainloop()
 
