@@ -47,6 +47,10 @@ class Interface:
         self.root = Tk()
         self.root.geometry("375x398")
         self.root.title('Vigenere Cipher')
+        
+        #add logo
+        logo = PhotoImage(file="assets/vc-logo.png")
+        self.root.iconphoto(False, logo)
 
         self.root.mainloop()
 
