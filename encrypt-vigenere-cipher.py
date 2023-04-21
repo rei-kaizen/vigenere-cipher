@@ -52,6 +52,19 @@ class Interface:
         logo = PhotoImage(file="assets/vc-logo.png")
         self.root.iconphoto(False, logo)
 
+        #set the frame for whole background appearance 
+        whole_frame= Frame(self.root, width=398, height=375, relief=GROOVE, borderwidth=5, bg="#1c1c1c")
+        whole_frame.place(x=0, y=0)
+
+        #create text boxes for the input of message and key
+        self.message_box = Text(whole_frame, relief=GROOVE, borderwidth=0, font = ("verdana", 13), fg="white", bg="black")
+        self.message_box.place(x=15, y=50, width=355, height=100)        
+        self.key_box = Text(whole_frame, borderwidth=0, font = ("verdana", 15), fg="white", bg="black")
+        self.key_box.place(x=15, y=200,  width=355, height=50 )
+
+
         self.root.mainloop()
+
+
 
 Interface()
