@@ -68,6 +68,14 @@ class Interface:
         key_label = Label(self.root, text="Enter a key for encryption", font = ("Helvetica 12 bold"), fg="gray", bg="#1c1c1c")
         key_label.place(x=15, y=170)
 
+        #embed buttons for encrypt, paste and reset methods
+        decrypt_button = Button(whole_frame, text="ENCRYPT", width=17, height=2, borderwidth=0, font = ("verdana 10 bold"), bg="red", fg="white")
+        decrypt_button.place(x=20, y=260)
+        paste_button = Button(whole_frame, text="PASTE", width=17, height=2, borderwidth=0, font = ("verdana 10 bold"), bg="green", fg="white")
+        paste_button.place(x=200, y=260)
+        reset_button = Button(whole_frame, text="RESET", width=37, height=2, borderwidth=0, font = ("verdana 10 bold"), bg="blue", fg="white")
+        reset_button.place(x=20, y=310)
+
         self.root.mainloop()
 
 
