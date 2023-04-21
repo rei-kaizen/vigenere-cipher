@@ -1,3 +1,5 @@
+from tkinter import *
+
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 #define a class which represents vigenere cipher
@@ -25,16 +27,27 @@ class VigenereCipher:
         )
 
 
-#ask the user for the key and message
-key = input('Enter the key: ')
-message = input('Enter the message: ')
+# #ask the user for the key and message
+# key = input('Enter the key: ')
+# message = input('Enter the message: ')
 
-#set vigenere cipher's key and message attributes
-cipher = VigenereCipher()
-cipher.key = key
-cipher.message = message
+# #set vigenere cipher's key and message attributes
+# cipher = VigenereCipher()
+# cipher.key = key
+# cipher.message = message
 
-#encrypt the message and print the ciphertext
-cipher.encrypt()
-print('Ciphertext:', cipher.ciphertext)
+# #encrypt the message and print the ciphertext
+# cipher.encrypt()
+# print('Ciphertext:', cipher.ciphertext)
 
+#build a GUI for the Vigenere Cipher
+class Interface:
+    def __init__(self):
+        """Initializes the interface window and runs the main loop."""
+        self.root = Tk()
+        self.root.geometry("375x398")
+        self.root.title('Vigenere Cipher')
+
+        self.root.mainloop()
+
+Interface()
