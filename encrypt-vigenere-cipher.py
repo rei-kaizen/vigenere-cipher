@@ -90,5 +90,19 @@ class Interface:
         self.ciphertext.place(x=10, y=40, width=380, height=150) 
         self.ciphertext.insert(END, ciphertext)
 
+    def paste(self):
+        """Pastes the contents of the system clipboard into the message or key text widget"""
+        #get the contents of the system clipboard
+        clipboard_text = self.root.clipboard_get()
+        #insert the clipboard contents into the message or key text widget, depending on which one has focus
+        if self.root.focus_get() == self.message_box:
+            self.message_box.insert(END, clipboard_text)
+        elif self.root.focus_get() == self.key_box:
+            self.key_box.insert(END, clipboard_text)
+
+    def reset(self):
+        """Clears the contents of input fields"""
+        self.message_box.delete("1.0", END)
+        self.key_box.delete("1.0", END)
     
 Interface()
