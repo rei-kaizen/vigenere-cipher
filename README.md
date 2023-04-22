@@ -51,12 +51,14 @@ class Interface(builtins.object)
  |      Clears the contents of input fields
 ```
 ## Demo
-User Input Interface
+**User Input Interface**
 <br>
+
 ![img](input-window.png)
 
-<br><br>
-
-Output Display Format
 <br>
+
+**Output Display Format**
+<br>
+
 ![img](output-window.png)
