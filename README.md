@@ -18,3 +18,45 @@ Mod: 4 12 21 2 10 7 12 22 21 17 8 11 0 22 24
 Ciphertext: E M V C K H M W V R I L A W Y
 
 ````
+## Documentation
+
+Some basic info about the methods defined in the VigenereCipher and Interface classes
+
+```
+class VigenereCipher(builtins.object)
+ |  #define a class which represents vigenere cipher
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self)
+ |      Initialize a new VigenereCipher object.
+ |
+ |  encrypt(self)
+ |      Encrypts the message using the vigenere cipher algorithm and sets the
+ |      ciphertext attribute with the uses the key and message attribute of the object
+```
+
+```
+class Interface(builtins.object)
+ |  #build a GUI for the Decryptor
+ |  __init__(self)
+ |      Initializes the interface window and runs the main loop.
+ |  encrypt(self)
+ |      Encrypts the message using the key and updates the GUI with the ciphertext.
+ |
+ |  paste(self)
+ |      Pastes the contents of the system clipboard into the message or key text widget
+ |
+ |  reset(self)
+ |      Clears the contents of input fields
+```
+## Demo
+User Input Interface
+<br>
+![img](input-window.png)
+
+<br><br>
+
+Output Display Format
+<br>
+![img](output-window.png)
